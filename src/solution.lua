@@ -1,10 +1,14 @@
-local solution = {}
+local kata = {}
 
-function solution.even_or_odd(number)
+function kata.disemvowel(s)
+end
+
+
+function kata.even_or_odd(number)
   return number % 2 == 0 and "Even" or "Odd"
 end
 
-function solution.multiples_of_3_or_5(value)
+function kata.multiples_of_3_or_5(value)
   local total = 0
   for i=1,value-1 do
     if ((i % 3 == 0) or (i % 5 == 0)) then
@@ -14,4 +18,4 @@ function solution.multiples_of_3_or_5(value)
   return total
 end
 
-return solution
+return kata
