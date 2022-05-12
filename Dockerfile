@@ -4,3 +4,4 @@ COPY . /workdir
 RUN apt update && apt install --yes \
     lua \
     luarocks
+RUN luarocks install busted
