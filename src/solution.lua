@@ -1,6 +1,17 @@
 local kata = {}
 
 function kata.disemvowel(s)
+    s = string.gsub(s, "A", "")
+    s = string.gsub(s, "a", "")
+    s = string.gsub(s, "E", "")
+    s = string.gsub(s, "e", "")
+    s = string.gsub(s, "I", "")
+    s = string.gsub(s, "i", "")
+    s = string.gsub(s, "O", "")
+    s = string.gsub(s, "o", "")
+    s = string.gsub(s, "U", "")
+    s = string.gsub(s, "u", "")
+    return s
 end
 
 
