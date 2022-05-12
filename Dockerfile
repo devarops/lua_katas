@@ -5,4 +5,6 @@ RUN apt update && apt install --yes \
     lua5.4 \
     luarocks \
     make
-RUN luarocks install busted
+RUN luarocks install \
+    busted \
+    luacheck

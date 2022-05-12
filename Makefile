@@ -3,8 +3,12 @@ all:
 
 .PHONY: \
 	all \
+	check \
 	init \
 	tests
+
+check:
+	luacheck src
 
 init: tests
 
