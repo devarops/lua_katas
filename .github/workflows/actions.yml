@@ -1,0 +1,20 @@
+name: Tests
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+  push:
+    branches:
+      - develop
+      - main
+jobs:
+  actions:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Copia repositorio
+      uses: actions/checkout@v2
+    - name: Construye imagen
+      run: docker build --tag lua_katas .
+    - name: Ejecuta objetivo principal del Makefile
+      run: docker run lua_katas make
