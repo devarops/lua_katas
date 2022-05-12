@@ -1,5 +1,11 @@
 local solution = require 'solution'
 
+describe("Disemvowel Trolls", function()
+  it("test1", function()
+    assert.are.same("Ths wbst s fr lsrs LL!", solution.disemvowel("This website is for losers LOL!"))
+  end)
+end)
+
 describe('Even or Odd', function()
   it('works for fixed tests', function()
     assert.are.equal('Odd', solution.even_or_odd(1))
