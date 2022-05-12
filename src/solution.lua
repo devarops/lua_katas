@@ -1,7 +1,7 @@
 local solution = {}
 
 function solution.even_or_odd(number)
-  -- Your code here
+  return number % 2 == 0 and "Even" or "Odd"
 end
 
 function solution.multiples_of_3_or_5(value)
