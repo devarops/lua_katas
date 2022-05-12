@@ -16,5 +16,5 @@ jobs:
       uses: actions/checkout@v2
     - name: Construye imagen
       run: docker build --tag lua_katas .
-    - name: Ejecuta objetivo principal del Makefile
-      run: docker run lua_katas make
+    - name: Corre pruebas
+      run: docker run lua_katas make tests
