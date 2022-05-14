@@ -9,6 +9,7 @@ function kata.even_or_odd(number)
   return number % 2 == 0 and "Even" or "Odd"
 end
 
+
 function kata.multiples_of_3_or_5(value)
   local total = 0
   for i=1,value-1 do
