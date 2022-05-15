@@ -1,4 +1,4 @@
-local solution = require 'solution'
+local solution = require("solution")
 
 describe("Disemvowel Trolls", function()
   it("test1", function()
@@ -6,13 +6,13 @@ describe("Disemvowel Trolls", function()
   end)
 end)
 
-describe('Even or Odd', function()
-  it('works for fixed tests', function()
-    assert.are.equal('Odd', solution.even_or_odd(1))
-    assert.are.equal('Even', solution.even_or_odd(2))
-    assert.are.equal('Odd', solution.even_or_odd(-1))
-    assert.are.equal('Even', solution.even_or_odd(-2))
-    assert.are.equal('Even', solution.even_or_odd(0))
+describe("Even or Odd", function()
+  it("works for fixed tests", function()
+    assert.are.equal("Odd", solution.even_or_odd(1))
+    assert.are.equal("Even", solution.even_or_odd(2))
+    assert.are.equal("Odd", solution.even_or_odd(-1))
+    assert.are.equal("Even", solution.even_or_odd(-2))
+    assert.are.equal("Even", solution.even_or_odd(0))
   end)
 end)
 
