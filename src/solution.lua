@@ -1,5 +1,9 @@
 local kata = {}
 
+function kata.multiply(a, b)
+  return a * b
+end
+
 function kata.disemvowel(s)
     return s:gsub("[AEIOUaeiou]", "")
 end
