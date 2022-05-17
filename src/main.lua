@@ -1,2 +1,2 @@
-#!/usr/bin/env lua
+#!/usr/bin/env lua5.4
 print("Hello world!")
