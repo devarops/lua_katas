@@ -1,5 +1,19 @@
 local solution = require("solution")
 
+describe("Mumbling", function()
+    local function dotest(s, expect)
+        local actual = solution.accum(s)
+        assert.are.same(expect, actual)
+    end
+
+    it("basic tests", function()
+        dotest("ZpglnRxqenU", "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu")
+        dotest("NyffsGeyylB", "N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb")
+        dotest("MjtkuBovqrU", "M-Jj-Ttt-Kkkk-Uuuuu-Bbbbbb-Ooooooo-Vvvvvvvv-Qqqqqqqqq-Rrrrrrrrrr-Uuuuuuuuuuu")
+        dotest("EvidjUnokmM", "E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm")
+    end)
+end)
+
 describe("Multiply", function()
     it("should return 0 for (0, 0)", function()
         assert.are.same(0, solution.multiply(0, 0))
