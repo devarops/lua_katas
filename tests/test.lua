@@ -17,8 +17,8 @@ describe("Mumbling", function()
         assert.are.same(expect, actual)
     end
 
-    it("The parameter of accum is a string which includes only letters from a..z and A..Z.",
-    function()
+    it([[The parameter of accum is a string which includes only letters from a..z and A..Z.
+    ]], function()
         dotest("ZpglnRxqenU", "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu")
         dotest("NyffsGeyylB", "N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb")
         dotest("MjtkuBovqrU", "M-Jj-Ttt-Kkkk-Uuuuu-Bbbbbb-Ooooooo-Vvvvvvvv-Qqqqqqqqq-Rrrrrrrrrr-Uuuuuuuuuuu")
@@ -62,7 +62,7 @@ describe("Multiples of 3 or 5", function()
     the multiples of 3 or 5 below the number passed in. Additionally, if the number is negative,
     return 0 (for languages that do have them).
     Note: If the number is a multiple of both 3 and 5, only count it once.]], function()
-        assert.are.same(23, solution.multiples_of_3_or_5(10))
-        assert.are.same(8, solution.multiples_of_3_or_5(6))
+        assert.are.same(23, solution.multiples(10))
+        assert.are.same(8, solution.multiples(6))
     end)
 end)
