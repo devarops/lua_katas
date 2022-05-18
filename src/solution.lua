@@ -1,5 +1,22 @@
 local kata = {}
 
+function kata.find(integers)
+    local odds = {}
+    local evens = {}
+    for _, value in pairs(integers) do
+        if value % 2 == 0 then
+            table.insert(odds, value)
+        else
+            table.insert(evens, value)
+        end
+        if #odds > 1 and #evens == 1 then
+            return evens[1]
+        elseif #evens > 1 and #odds == 1 then
+            return odds[1]
+        end
+    end
+end
+
 function kata.accum(s)
     local mumble = {}
     for i = 1, #s do
