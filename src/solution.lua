@@ -1,22 +1,12 @@
 local kata = {}
 
 function kata.accum(s)
-    local mumble = ""
+    local mumble = {}
     for i = 1, #s do
-        for j = 1, i do
-            local letter = string.sub(s, i, i)
-            if j == 1 then
-                letter = string.upper(letter)
-            else
-                letter = string.lower(letter)
-            end
-            mumble = mumble .. letter
-        end
-        if i < #s then
-            mumble = mumble .. "-"
-        end
+        local letter = string.sub(s, i, i)
+        mumble[i] = string.upper(letter) .. string.rep(string.lower(letter), i - 1)
     end
-    return mumble
+    return table.concat(mumble, "-")
 end
 
 function kata.multiply(a, b)
