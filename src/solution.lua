@@ -1,5 +1,13 @@
 local kata = {}
 
+function kata.positive_sum(arr)
+    local sum = 0
+    for _, value in pairs(arr) do
+        sum = sum + (value >= 0 and value or 0)
+    end
+    return sum
+end
+
 function kata.find(integers)
     local odds = {}
     local evens = {}

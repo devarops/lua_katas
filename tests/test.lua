@@ -1,5 +1,20 @@
 local solution = require("solution")
 
+describe("positive_sum", function()
+    -- You get an array of numbers, return the sum of all of the positives ones.
+    it("works for some examples", function()
+        assert.are.same(15, solution.positive_sum({ 1, 2, 3, 4, 5 }))
+        assert.are.same(13, solution.positive_sum({ 1, -2, 3, 4, 5 }))
+        assert.are.same(9, solution.positive_sum({ -1, 2, 3, 4, -5 }))
+    end)
+    it("returns 0 when array is empty", function()
+        assert.are.same(0, solution.positive_sum({}))
+    end)
+    it("returns 0 when all elements are negative", function()
+        assert.are.same(0, solution.positive_sum({ -1, -2, -3, -4, -5 }))
+    end)
+end)
+
 describe("Find The Parity Outlier", function()
     it([[You are given an array (which will have a length of at least 3, but could be very large)
     containing integers. The array is either entirely comprised of odd integers or entirely
