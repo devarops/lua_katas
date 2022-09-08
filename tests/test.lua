@@ -1,5 +1,13 @@
 local solution = require("solution")
 
+describe("Fixed Tests", function()
+    it([[Complete the method that takes a boolean value and return a "Yes" string for true, or a
+    "No" string for false.]], function()
+        assert.are.same("Yes", solution.bool_to_word(true))
+        assert.are.same("No", solution.bool_to_word(false))
+    end)
+end)
+
 describe("positive_sum", function()
     -- You get an array of numbers, return the sum of all of the positives ones.
     it("works for some examples", function()

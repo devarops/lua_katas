@@ -1,5 +1,9 @@
 local kata = {}
 
+function kata.bool_to_word(boolean)
+    return boolean and "Yes" or "No"
+end
+
 function kata.positive_sum(arr)
     local sum = 0
     for _, value in pairs(arr) do
