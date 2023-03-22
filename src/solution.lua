@@ -1,5 +1,13 @@
 local kata = {}
 
+function kata.vowelCount(str)
+  local count = 0
+  for _ in str:gmatch("[aeiouAEIOU]") do
+    count = count + 1
+  end
+  return count
+end
+
 function kata.bool_to_word(boolean)
     return boolean and "Yes" or "No"
 end
