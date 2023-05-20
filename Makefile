@@ -15,7 +15,7 @@ check:
 
 green: check
 	busted tests/test.lua \
-	&& (git add src/*.lua && git commit -m "✅ Pass tests") \
+	&& (git add src/*.lua tests/*.lua && git commit -m "✅ Pass tests") \
 	|| git restore .
 	chmod g+w -R .
 
