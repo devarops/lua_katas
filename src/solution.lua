@@ -1,7 +1,13 @@
 local kata = {}
 
 function kata.spinWords(sentence)
-    return #sentence > 4 and sentence:reverse() or sentence
+    local words = {}
+    local spined_word
+    for word in sentence:gmatch("%S+") do
+        spined_word = #word > 4 and word:reverse() or word
+        table.insert(words, spined_word)
+    end
+    return table.concat(words, " ")
 end
 
 function kata.vowelCount(str)
