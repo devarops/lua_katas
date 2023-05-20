@@ -1,5 +1,8 @@
 local kata = {}
 
+function kata.spinWords()
+end
+
 function kata.vowelCount(str)
   local count = 0
   for _ in str:gmatch("[aeiouAEIOU]") do
