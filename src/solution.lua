@@ -1,7 +1,7 @@
 local kata = {}
 
 function kata.spinWords(sentence)
-    return sentence
+    return #sentence > 4 and sentence:reverse() or sentence
 end
 
 function kata.vowelCount(str)
