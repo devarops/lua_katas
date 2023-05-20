@@ -1,6 +1,7 @@
 local kata = {}
 
 function kata.spinWords()
+    return "Hey"
 end
 
 function kata.vowelCount(str)
