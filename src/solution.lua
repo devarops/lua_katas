@@ -1,6 +1,6 @@
 local kata = {}
 
-function kata.spinWords(sentence)
+function kata.spin_words(sentence)
     local words = {}
     local spined_word
     for word in sentence:gmatch("%S+") do

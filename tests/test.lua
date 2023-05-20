@@ -11,31 +11,31 @@ consist of only letters and spaces. Spaces will be included only when more than 
 Examples:
 
 ```
-spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw"
-spinWords( "This is a test") => returns "This is a test"
-spinWords( "This is another test" )=> returns "This is rehtona test"
+spin_words( "Hey fellow warriors" ) => returns "Hey wollef sroirraw"
+spin_words( "This is a test") => returns "This is a test"
+spin_words( "This is another test" )=> returns "This is rehtona test"
 ```
 ]]
 
 describe("TDD:", function()
   it("The function exists", function()
-    assert(type(solution.spinWords) == "function", "spinWords() does not exist!")
+    assert(type(solution.spin_words) == "function", "spin_words() does not exist!")
   end)
   it("should return the same word for single word with less than 5 letters", function()
-    assert.are.same(solution.spinWords("One"), "One")
-    assert.are.same(solution.spinWords("Two"), "Two")
+    assert.are.same(solution.spin_words("One"), "One")
+    assert.are.same(solution.spin_words("Two"), "Two")
   end)
   it("should return the reversed word for single word with 5 letters or more", function()
-      assert.are.same(solution.spinWords("Three"), "eerhT")
-      assert.are.same(solution.spinWords("Evaristo"), "otsiravE")
+      assert.are.same(solution.spin_words("Three"), "eerhT")
+      assert.are.same(solution.spin_words("Evaristo"), "otsiravE")
   end)
   it("should return the same sentence for sentences with only words with less than 5 letters", function()
-      assert.are.same(solution.spinWords("One Two"), "One Two")
+      assert.are.same(solution.spin_words("One Two"), "One Two")
   end)
   it("🥇 Gold", function()
-      assert.are.same(solution.spinWords("Hey fellow warriors"), "Hey wollef sroirraw")
-      assert.are.same(solution.spinWords("This is a test"), "This is a test")
-      assert.are.same(solution.spinWords("This is another test"), "This is rehtona test")
+      assert.are.same(solution.spin_words("Hey fellow warriors"), "Hey wollef sroirraw")
+      assert.are.same(solution.spin_words("This is a test"), "This is a test")
+      assert.are.same(solution.spin_words("This is another test"), "This is rehtona test")
   end)
 end)
 
