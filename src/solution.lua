@@ -1,5 +1,8 @@
 local kata = {}
 
+function kata.create_phone_number()
+end
+
 function kata.spin_words(sentence)
     local words = {}
     local spined_word
