@@ -32,6 +32,11 @@ describe("TDD:", function()
   it("should return the same sentence for sentences with only words with less than 5 letters", function()
       assert.are.same(solution.spinWords("One Two"), "One Two")
   end)
+  it("🥇 Gold", function()
+      assert.are.same(solution.spinWords("Hey fellow warriors"), "Hey wollef sroirraw")
+      assert.are.same(solution.spinWords("This is a test"), "This is a test")
+      assert.are.same(solution.spinWords("This is another test"), "This is rehtona test")
+  end)
 end)
 
 --[[ Vowel Count
