@@ -2,6 +2,7 @@ FROM ubuntu:22.04
 WORKDIR /workdir
 COPY . /workdir
 RUN apt update && apt install --yes \
+    git \
     lua5.4 \
     luarocks \
     make
