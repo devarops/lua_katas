@@ -25,6 +25,9 @@ describe("TDD:", function()
     assert.are.same(solution.spinWords("One"), "One")
     assert.are.same(solution.spinWords("Two"), "Two")
   end)
+  it("should return the reversed word for single word with 5 letters or more", function()
+      assert.are.same(solution.spinWords("Three"), "eerhT")
+  end)
 end)
 
 --[[ Vowel Count
