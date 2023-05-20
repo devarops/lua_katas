@@ -21,6 +21,9 @@ describe("TDD:", function()
   it("The function exists", function()
     assert(type(solution.spinWords) == "function", "spinWords() does not exist!")
   end)
+  it("should return the same word for single word with less than 5 letters", function()
+    assert.are.same(solution.spinWords("Hey"), "Hey")
+  end)
 end)
 
 --[[ Vowel Count
