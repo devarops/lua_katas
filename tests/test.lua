@@ -22,6 +22,9 @@ describe("TDD:", function()
   it("The function exists", function()
     assert(type(solution.create_phone_number) == "function", "create_phone_number() does not exist!")
   end)
+  it("converts number array to string", function()
+    assert.are.same(solution.create_phone_number({1,2,3}), "123")
+  end)
 end)
 
 --[[ Stop gninnipS My sdroW!

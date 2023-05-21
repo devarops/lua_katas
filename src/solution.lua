@@ -1,6 +1,7 @@
 local kata = {}
 
-function kata.create_phone_number()
+function kata.create_phone_number(numbers)
+    return string.format("%d%d%d", unpack(numbers))
 end
 
 function kata.spin_words(sentence)
