@@ -4,7 +4,8 @@ function kata.high_and_low(numbers)
     local array_of_numbers = kata._string_to_array(numbers)
     local max = math.max(table.unpack(array_of_numbers))
     local min = math.min(table.unpack(array_of_numbers))
-    return kata._array_to_string({max, min})
+    local max_and_min = {max, min}
+    return kata._array_to_string(max_and_min)
 end
 function kata._string_to_array(string_of_numbers)
     local array_of_numbers = {}
