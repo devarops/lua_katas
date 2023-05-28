@@ -26,10 +26,10 @@ describe("high_and_low", function()
   it("The function exists", function()
     assert(type(solution.high_and_low) == "function", "high_and_low() does not exist!")
   end)
-  --[[
   it("should return the same number for single number", function()
     assert.are.same(solution.high_and_low("1"), "1 1")
   end)
+  --[[
   it("should return the highest and lowest number for two numbers", function()
     assert.are.same(solution.high_and_low("1 2"), "2 1")
   end)
