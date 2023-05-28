@@ -2,7 +2,9 @@ local kata = {}
 
 function kata.high_and_low(numbers)
     local array_of_numbers = kata._string_to_array(numbers)
-    return kata._array_to_string({math.max(table.unpack(array_of_numbers)), math.min(table.unpack(array_of_numbers))})
+    local max = math.max(table.unpack(array_of_numbers))
+    local min = math.min(table.unpack(array_of_numbers))
+    return kata._array_to_string({max, min})
 end
 function kata._string_to_array(string_of_numbers)
     local array_of_numbers = {}
