@@ -3,9 +3,9 @@ local kata = {}
 function kata.high_and_low(numbers)
     return numbers .. " " .. numbers
 end
-function kata._string_to_array(string)
+function kata._string_to_array(string_of_numbers)
     local array = {}
-    for string_number in string:gmatch("%S+") do
+    for string_number in string_of_numbers:gmatch("%S+") do
         table.insert(array, tonumber(string_number))
     end
     return array
