@@ -68,7 +68,7 @@ The returned format must be correct in order to complete this challenge.
 Don't forget the space after the closing parentheses!
 ]]
 
-describe("TDD:", function()
+describe("create_phone_number", function()
   it("The function exists", function()
     assert(type(solution.create_phone_number) == "function", "create_phone_number() does not exist!")
   end)
@@ -121,7 +121,6 @@ https://www.codewars.com/kata/54ff3102c1bad923760001f3/train/lua
 Return the number (count) of vowels in the given string.
 We will consider a, e, i, o, u as vowels for this Kata (but not y).
 The input string will only consist of lower case letters and/or spaces.
-
 ]]
 
 describe("vowelCount", function()
@@ -146,6 +145,16 @@ describe("vowelCount", function()
   it("should return 5 for 'abracadabra'", function()
     assert.are.same(solution.vowelCount("abracadabra"), 5)
   end)
+end)
+
+--[[ Convert boolean values to strings 'Yes' or 'No'.
+https://www.codewars.com/kata/53369039d7ab3ac506000467/train/lua
+
+Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string
+for false.
+]]
+
+describe("bool_to_word", function()
   it([[Complete the method that takes a boolean value and return a "Yes" string for true, or a
        "No" string for false.]], function()
         assert.are.same("Yes", solution.bool_to_word(true))
@@ -153,8 +162,23 @@ describe("vowelCount", function()
   end)
 end)
 
+--[[ Sum of positive
+https://www.codewars.com/kata/5715eaedb436cf5606000381/train/lua
+
+You get an array of numbers, return the sum of all of the positives ones.
+
+## Example
+
+```
+[1,-4,7,12] => 1 + 7 + 12 = 20
+```
+
+## Note
+
+- if there is nothing to sum, the sum is default to 0.
+]]
+
 describe("positive_sum", function()
-    -- You get an array of numbers, return the sum of all of the positives ones.
     it("works for some examples", function()
         assert.are.same(15, solution.positive_sum({ 1, 2, 3, 4, 5 }))
         assert.are.same(13, solution.positive_sum({ 1, -2, 3, 4, 5 }))
@@ -168,11 +192,26 @@ describe("positive_sum", function()
     end)
 end)
 
-describe("Find The Parity Outlier", function()
-    it([[You are given an array (which will have a length of at least 3, but could be very large)
-    containing integers. The array is either entirely comprised of odd integers or entirely
-    comprised of even integers except for a single integer N. Write a method that takes the array
-    as any argument and returns this "outlier" N.]], function()
+--[[ Find The Parity outlier
+https://www.codewars.com/kata/5526fc09a1bbd946250002dc/train/lua
+
+You are given an array (which will have a length of at least 3, but could be very large) containing
+integers. The array is either entirely comprised of odd integers or entirely comprised of even
+integers except for a single integer N. Write a method that takes the array as an argument and
+returns this "outlier" N.
+
+## Examples
+```
+[2, 4, 0, 100, 4, 11, 2602, 36]
+-- Should return: 11 (the only odd number)
+
+[160, 3, 1719, 19, 11, 13, -21]
+-- Should return: 160 (the only even number)
+```
+]]
+
+describe("find", function()
+    it("should return the outlier", function()
         assert.are.same(3, solution.find({ 2, 6, 8, -10, 3 }))
         assert.are.same(206847684, solution.find({ 206847684, 1056521, 7, 17, 1901, 21104421, 7, 1, 35521, 1, 7781 }))
         assert.are.same(0, solution.find({ 2147483647, 0, 1 }))
