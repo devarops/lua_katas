@@ -247,7 +247,13 @@ describe("accum", function()
     end)
 end)
 
-describe("Multiply", function()
+--[[ Multiply
+https://www.codewars.com/kata/50654ddff44f800200000004/train/lua
+
+This code does not execute properly. Try to figure out why.
+]]
+
+describe("multiply", function()
     it("should return 0 for (0, 0)", function()
         assert.are.same(0, solution.multiply(0, 0))
     end)
@@ -256,12 +262,24 @@ describe("Multiply", function()
     end)
 end)
 
-describe("Disemvowel Trolls", function()
-    it([[Trolls are attacking your comment section! A common way to deal with this situation is to
-    remove all of the vowels from the trolls' comments, neutralizing the threat. Your task is to
-    write a function that takes a string and return a new string with all vowels removed. For
-    example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
-    ]], function()
+--[[ Disemvowel Trolls
+https://www.codewars.com/kata/52fba66badcd10859f00097e/train/lua
+
+Trolls are attacking your comment section!
+
+A common way to deal with this situation is to remove all of the vowels from the trolls' comments,
+neutralizing the threat.
+
+Your task is to write a function that takes a string and return a new string with all vowels
+removed.
+
+For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+Note: for this kata y isn't considered a vowel.
+]]
+
+describe("disemvowel", function()
+    it("should remove all vowels from a string", function()
         assert.are.same("Ths wbst s fr lsrs LL!", solution.disemvowel("This website is for losers LOL!"))
     end)
 end)
