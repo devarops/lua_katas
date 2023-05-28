@@ -1,5 +1,8 @@
 local kata = {}
 
+function kata.high_and_low()
+end
+
 function kata.create_phone_number(numbers)
     return string.format("(%d%d%d) %d%d%d-%d%d%d%d", table.unpack(numbers))
 end
