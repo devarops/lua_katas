@@ -1,6 +1,7 @@
 local kata = {}
 
-function kata.high_and_low()
+function kata.high_and_low(numbers)
+    return numbers .. " " .. numbers
 end
 
 function kata.create_phone_number(numbers)
