@@ -93,7 +93,7 @@ spin_words( "This is another test" )=> returns "This is rehtona test"
 ```
 ]]
 
-describe("TDD:", function()
+describe("spin_words", function()
   it("The function exists", function()
     assert(type(solution.spin_words) == "function", "spin_words() does not exist!")
   end)
@@ -121,44 +121,36 @@ https://www.codewars.com/kata/54ff3102c1bad923760001f3/train/lua
 Return the number (count) of vowels in the given string.
 We will consider a, e, i, o, u as vowels for this Kata (but not y).
 The input string will only consist of lower case letters and/or spaces.
+
 ]]
 
-describe("TDD:", function()
+describe("vowelCount", function()
   it("The function exists", function()
     assert(type(solution.vowelCount) == "function", "vowelCount() does not exist!")
   end)
   it("should count a as one vowel", function()
     assert.are.same(solution.vowelCount("a"), 1)
   end)
-end)
-describe("sample tests", function()
   it("should count all vowels", function()
     assert.are.same(solution.vowelCount("aeiou"), 5)
   end)
-
   it("should not count 'y'", function()
     assert.are.same(solution.vowelCount("y"), 0)
   end)
-
   it("should return 0 when no vowels", function()
     assert.are.same(solution.vowelCount("bcdfghjklmnpqrstvwxz y"), 0)
   end)
-
   it("should return 0 for empty string", function()
     assert.are.same(solution.vowelCount(""), 0)
   end)
-
   it("should return 5 for 'abracadabra'", function()
     assert.are.same(solution.vowelCount("abracadabra"), 5)
   end)
-end)
-
-describe("Fixed Tests", function()
-    it([[Complete the method that takes a boolean value and return a "Yes" string for true, or a
-    "No" string for false.]], function()
+  it([[Complete the method that takes a boolean value and return a "Yes" string for true, or a
+       "No" string for false.]], function()
         assert.are.same("Yes", solution.bool_to_word(true))
         assert.are.same("No", solution.bool_to_word(false))
-    end)
+  end)
 end)
 
 describe("positive_sum", function()
