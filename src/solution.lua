@@ -1,7 +1,8 @@
 local kata = {}
 
 function kata.high_and_low(numbers)
-    return numbers .. " " .. numbers
+    local array_of_numbers = kata._string_to_array(numbers)
+    return kata._array_to_string(array_of_numbers)
 end
 function kata._string_to_array(string_of_numbers)
     local array_of_numbers = {}
@@ -11,7 +12,7 @@ function kata._string_to_array(string_of_numbers)
     return array_of_numbers
 end
 function kata._array_to_string(array_of_numbers)
-    return array_of_numbers[1] .. " " .. array_of_numbers[2]
+    return array_of_numbers[1] .. " " .. array_of_numbers[#array_of_numbers]
 end
 
 function kata.create_phone_number(numbers)
