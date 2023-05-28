@@ -284,9 +284,15 @@ describe("disemvowel", function()
     end)
 end)
 
-describe("Even or Odd", function()
-    it([[Create a function that takes an integer as an argument and returns "Even" for even numbers
-    or "Odd" for odd numbers.]], function()
+--[[ Even or Odd
+https://www.codewars.com/kata/53da3dbb4a5168369a0000fe/train/lua
+
+Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd"
+for odd numbers.
+]]
+
+describe("even_or_odd", function()
+    it("should return 'Even' for even numbers and 'Odd' for odd numbers", function()
         assert.are.equal("Odd", solution.even_or_odd(1))
         assert.are.equal("Even", solution.even_or_odd(2))
         assert.are.equal("Odd", solution.even_or_odd(-1))
