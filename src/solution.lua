@@ -3,6 +3,13 @@ local kata = {}
 function kata.high_and_low(numbers)
     return numbers .. " " .. numbers
 end
+function kata._string_to_array(string)
+    local array = {}
+    for number in string:gmatch("%S+") do
+        table.insert(array, tonumber(number))
+    end
+    return array
+end
 
 function kata.create_phone_number(numbers)
     return string.format("(%d%d%d) %d%d%d-%d%d%d%d", table.unpack(numbers))
