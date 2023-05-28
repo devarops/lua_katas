@@ -155,8 +155,7 @@ for false.
 ]]
 
 describe("bool_to_word", function()
-  it([[Complete the method that takes a boolean value and return a "Yes" string for true, or a
-       "No" string for false.]], function()
+  it("retuns 'Yes' for true and 'No' for false", function()
         assert.are.same("Yes", solution.bool_to_word(true))
         assert.are.same("No", solution.bool_to_word(false))
   end)
@@ -179,15 +178,15 @@ You get an array of numbers, return the sum of all of the positives ones.
 ]]
 
 describe("positive_sum", function()
-    it("works for some examples", function()
+    it("returns the sum of all positive numbers", function()
         assert.are.same(15, solution.positive_sum({ 1, 2, 3, 4, 5 }))
         assert.are.same(13, solution.positive_sum({ 1, -2, 3, 4, 5 }))
         assert.are.same(9, solution.positive_sum({ -1, 2, 3, 4, -5 }))
     end)
-    it("returns 0 when array is empty", function()
+    it("returns 0 when the array is empty", function()
         assert.are.same(0, solution.positive_sum({}))
     end)
-    it("returns 0 when all elements are negative", function()
+    it("returns 0 when all numbers are negative", function()
         assert.are.same(0, solution.positive_sum({ -1, -2, -3, -4, -5 }))
     end)
 end)
@@ -239,7 +238,7 @@ describe("accum", function()
         local actual = solution.accum(s)
         assert.are.same(expect, actual)
     end
-    it("basic tests", function()
+    it("should handle basic cases", function()
         dotest("ZpglnRxqenU", "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu")
         dotest("NyffsGeyylB", "N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb")
         dotest("MjtkuBovqrU", "M-Jj-Ttt-Kkkk-Uuuuu-Bbbbbb-Ooooooo-Vvvvvvvv-Qqqqqqqqq-Rrrrrrrrrr-Uuuuuuuuuuu")
