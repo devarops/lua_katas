@@ -5,8 +5,8 @@ function kata.high_and_low(numbers)
 end
 function kata._string_to_array(string)
     local array = {}
-    for number in string:gmatch("%S+") do
-        table.insert(array, tonumber(number))
+    for string_number in string:gmatch("%S+") do
+        table.insert(array, tonumber(string_number))
     end
     return array
 end
