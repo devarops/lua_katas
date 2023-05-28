@@ -1,6 +1,56 @@
 -- https://www.codewars.com/kata/search/lua?q=&xids=completed&beta=false&order_by=popularity%20desc
 local solution = require("solution")
 
+--[[ Highest and Lowest
+https://www.codewars.com/kata/554b4ac871d6813a03000035/train/lua
+
+In this little assignment you are given a string of space separated numbers, and have to return the
+highest and lowest number.
+
+## Examples:
+
+```
+high_and_low "1 2 3 4 5"   --> return "5 1"
+high_and_low "1 2 -3 4 5"  --> return "5 -3"
+high_and_low "1 9 3 4 -5"  --> return "9 -5"
+```
+
+## Notes:
+
+- All numbers are valid Int32, no need to validate them.
+- There will always be at least one number in the input string.
+- Output string must be two numbers separated by a single space, and highest number is first.
+]]
+
+describe("high_and_low", function()
+  it("The function exists", function()
+    assert(type(solution.high_and_low) == "function", "high_and_low() does not exist!")
+  end)
+  --[[
+  it("should return the same number for single number", function()
+    assert.are.same(solution.high_and_low("1"), "1 1")
+  end)
+  it("should return the highest and lowest number for two numbers", function()
+    assert.are.same(solution.high_and_low("1 2"), "2 1")
+  end)
+  it("should return the highest and lowest number for three numbers", function()
+    assert.are.same(solution.high_and_low("1 2 3"), "3 1")
+  end)
+  it("should return the highest and lowest number for four numbers", function()
+    assert.are.same(solution.high_and_low("1 2 3 4"), "4 1")
+  end)
+  it("should return the highest and lowest number for five numbers", function()
+    assert.are.same(solution.high_and_low("1 2 3 4 5"), "5 1")
+  end)
+  it("should return the highest and lowest number for five numbers with negative numbers", function()
+    assert.are.same(solution.high_and_low("1 2 3 4 -5"), "4 -5")
+  end)
+  it("should return the highest and lowest number for five numbers with negative numbers", function()
+    assert.are.same(solution.high_and_low("1 9 3 4 -5"), "9 -5")
+  end)
+  ]]
+end)
+
 --[[ Create Phone number
 https://www.codewars.com/kata/525f50e3b73515a6db000b83/train/lua
 
