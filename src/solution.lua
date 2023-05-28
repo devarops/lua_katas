@@ -10,6 +10,9 @@ function kata._string_to_array(string_of_numbers)
     end
     return array_of_numbers
 end
+function kata._array_to_string(array_of_numbers)
+    return array_of_numbers[1] .. " " .. array_of_numbers[2]
+end
 
 function kata.create_phone_number(numbers)
     return string.format("(%d%d%d) %d%d%d-%d%d%d%d", table.unpack(numbers))
