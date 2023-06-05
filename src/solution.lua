@@ -1,6 +1,7 @@
 local kata = {}
 
-function kata.count_bits()
+function kata.count_bits(n)
+    return n
 end
 
 function kata.high_and_low(numbers)
