@@ -1,6 +1,58 @@
 -- https://www.codewars.com/kata/search/lua?q=&xids=completed&beta=false&order_by=popularity%20desc
 local solution = require("solution")
 
+--[[ Bit Counting
+https://www.codewars.com/kata/526571aae218b8ee490006f4/train/lua
+
+Write a function that takes an integer as input, and returns the number of bits that are equal to
+one in the binary representation of that number. You can guarantee that input is non-negative.
+
+## Example
+
+The binary representation of `1234` is `10011010010`, so the function should return `5` in this case.
+]]
+
+describe("count_bits", function()
+  it("The function exists", function()
+    assert(type(solution.count_bits) == "function", "count_bits() does not exist!")
+  end)
+--[[
+  it("should return 0 for 0", function()
+    assert.are.same(solution.count_bits(0), 0)
+  end)
+  it("should return 1 for 1", function()
+    assert.are.same(solution.count_bits(1), 1)
+  end)
+  it("should return 2 for 2", function()
+    assert.are.same(solution.count_bits(2), 1)
+  end)
+  it("should return 3 for 3", function()
+    assert.are.same(solution.count_bits(3), 2)
+  end)
+  it("should return 4 for 4", function()
+    assert.are.same(solution.count_bits(4), 1)
+  end)
+  it("should return 5 for 5", function()
+    assert.are.same(solution.count_bits(5), 2)
+  end)
+  it("should return 6 for 6", function()
+    assert.are.same(solution.count_bits(6), 2)
+  end)
+  it("should return 7 for 7", function()
+    assert.are.same(solution.count_bits(7), 3)
+  end)
+  it("should return 8 for 8", function()
+    assert.are.same(solution.count_bits(8), 1)
+  end)
+  it("should return 9 for 9", function()
+    assert.are.same(solution.count_bits(9), 2)
+  end)
+  it("should return 10 for 10", function()
+    assert.are.same(solution.count_bits(10), 2)
+  end)
+]]
+end)
+
 --[[ Highest and Lowest
 https://www.codewars.com/kata/554b4ac871d6813a03000035/train/lua
 
