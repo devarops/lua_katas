@@ -1,7 +1,12 @@
 local kata = {}
 
 function kata.count_bits(n)
-    return n
+    local count = 0
+    while n > 0 do
+        count = count + (n % 2)
+        n = math.floor(n / 2)
+    end
+    return count
 end
 
 function kata.high_and_low(numbers)
