@@ -1,5 +1,8 @@
 local kata = {}
 
+function kata.count_bits()
+end
+
 function kata.high_and_low(numbers)
     local array_of_numbers = kata._string_to_array(numbers)
     local max = math.max(table.unpack(array_of_numbers))
