@@ -16,10 +16,10 @@ describe("count_bits", function()
   it("The function exists", function()
     assert(type(solution.count_bits) == "function", "count_bits() does not exist!")
   end)
---[[
   it("should return 0 for 0", function()
     assert.are.same(solution.count_bits(0), 0)
   end)
+--[[
   it("should return 1 for 1", function()
     assert.are.same(solution.count_bits(1), 1)
   end)
