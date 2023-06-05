@@ -22,10 +22,10 @@ describe("count_bits", function()
   it("should return 1 for 1", function()
     assert.are.same(solution.count_bits(1), 1)
   end)
---[[
-  it("should return 2 for 2", function()
+  it("should return 1 for 2", function()
     assert.are.same(solution.count_bits(2), 1)
   end)
+--[[
   it("should return 3 for 3", function()
     assert.are.same(solution.count_bits(3), 2)
   end)
