@@ -1,7 +1,7 @@
 local kata = {}
 
-function kata.issquare()
-    return true
+function kata.issquare(n)
+    return math.sqrt(n) % 1 == 0
 end
 
 function kata.count_bits(n)
