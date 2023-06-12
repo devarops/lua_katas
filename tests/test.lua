@@ -42,6 +42,9 @@ describe("issquare", function()
   it("should return true for 0", function()
     assert.are.equal(true, solution.issquare(0))
   end)
+  it("should return true for 1", function()
+    assert.are.equal(true, solution.issquare(1))
+  end)
 end)
 
 --[[ Bit Counting
