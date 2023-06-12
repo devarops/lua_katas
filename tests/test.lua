@@ -39,6 +39,9 @@ describe("issquare", function()
   it("The function exists", function()
     assert(type(solution.issquare) == "function", "issquare() does not exist!")
   end)
+  it("should return true for 0", function()
+    assert.are.equal(true, solution.issquare(0))
+  end)
 end)
 
 --[[ Bit Counting
