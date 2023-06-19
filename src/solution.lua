@@ -1,7 +1,7 @@
 local kata = {}
 
 function kata.is_valid_walk(walk)
-    return walk
+    return #walk == 10
 end
 
 function kata.issquare(n)
