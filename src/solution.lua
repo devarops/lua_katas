@@ -3,6 +3,17 @@ local kata = {}
 function kata.is_valid_walk(walk)
     return #walk == 10
 end
+function kata._is_back_to_origin(walk)
+    local x = 0
+    local y = 0
+    for _, direction in pairs(walk) do
+        x = direction == "e" and x + 1 or x
+        x = direction == "w" and x - 1 or x
+        y = direction == "n" and y + 1 or y
+        y = direction == "s" and y - 1 or y
+    end
+    return x == 0 and y == 0
+end
 
 function kata.issquare(n)
     return math.sqrt(n) % 1 == 0
