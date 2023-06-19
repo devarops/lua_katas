@@ -1,5 +1,9 @@
 local kata = {}
 
+function kata.is_valid_walk(walk)
+    return walk
+end
+
 function kata.issquare(n)
     return math.sqrt(n) % 1 == 0
 end
