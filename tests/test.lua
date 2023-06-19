@@ -22,6 +22,9 @@ describe("is_valid_walk", function()
   it("The function exists", function()
     assert(type(solution.is_valid_walk) == "function", "is_valid_walk() does not exist!")
   end)
+  it("should return false for short walks", function()
+    assert.is_false(solution.is_valid_walk({'w'}))
+  end)
 end)
 
 --[[ You're a square!
