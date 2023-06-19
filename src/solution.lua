@@ -1,7 +1,7 @@
 local kata = {}
 
 function kata.is_valid_walk(walk)
-    return #walk == 10
+    return #walk == 10 and kata._is_back_to_origin(walk)
 end
 function kata._is_back_to_origin(walk)
     local x = 0
