@@ -26,6 +26,11 @@ describe("is_valid_walk", function()
     assert.is_false(solution.is_valid_walk({'w'}))
   end)
 end)
+describe("_is_back_to_origin", function()
+  it("should return true for a walk that ends at the origin", function()
+    assert.is_true(solution._is_back_to_origin({'w', 'e'}))
+  end)
+end)
 
 --[[ You're a square!
 https://www.codewars.com/kata/54c27a33fb7da0db0100040e/train/lua
