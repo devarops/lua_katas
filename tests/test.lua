@@ -1,5 +1,16 @@
 -- https://www.codewars.com/kata/search/lua?q=&xids=completed&beta=false&order_by=popularity%20desc
 local solution = require("solution")
+--[[ Remove First and Last Character
+It's pretty straightforward. Your goal is to create a function that removes the first and last
+characters of a string. You're given one parameter, the original string. You don't have to worry
+with strings with less than two characters.
+]]
+
+describe("remove_chars", function()
+  it("The function exists", function()
+    assert(type(solution.remove_chars) == "function", "remove_chars() does not exist!")
+  end)
+end)
 
 --[[ Take a Ten Minutes Walk
 https://www.codewars.com/kata/54da539698b8a2ad76000228/train/lua
