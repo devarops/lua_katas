@@ -13,6 +13,13 @@ describe("remove_chars", function()
   it("returns a shorter string", function()
     assert.is_true(#solution.remove_chars("hello")==#"hello"-2)
   end)
+  it("should be equal to", function()
+    assert.are.same('loquen', solution.remove_chars('eloquent'))
+    assert.are.same('ountr', solution.remove_chars('country'))
+    assert.are.same('erso', solution.remove_chars('person'))
+    assert.are.same('lac', solution.remove_chars('place'))
+    assert.are.same('', solution.remove_chars('ok'))
+  end)
 end)
 
 --[[ Take a Ten Minutes Walk
