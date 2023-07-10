@@ -1,7 +1,7 @@
 local kata = {}
 
-function kata.remove_chars(string)
-    return string
+function kata.remove_chars(s)
+    return string.sub(s,2,-2)
 end
 
 function kata.is_valid_walk(walk)
