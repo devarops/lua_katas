@@ -1,5 +1,9 @@
 local kata = {}
 
+function kata.remove_chars(string)
+    return string
+end
+
 function kata.is_valid_walk(walk)
     return #walk == 10 and kata._is_back_to_origin(walk)
 end
