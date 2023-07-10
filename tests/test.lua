@@ -10,6 +10,9 @@ describe("remove_chars", function()
   it("The function exists", function()
     assert(type(solution.remove_chars) == "function", "remove_chars() does not exist!")
   end)
+  it("returns a shorter string", function()
+    assert.is_true(#solution.remove_chars("hello")==#"hello"-2)
+  end)
 end)
 
 --[[ Take a Ten Minutes Walk
