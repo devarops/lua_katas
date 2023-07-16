@@ -19,6 +19,9 @@ describe("persistence", function()
   it("The function exists", function()
     assert(type(solution.persistence) == "function", "persistence() does not exist!")
   end)
+  it("Basic Test Case", function()
+    assert.are.same(0, solution.persistence(4))
+  end)
 end)
 
 --[[ Remove First and Last Character
