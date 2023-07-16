@@ -1,5 +1,9 @@
 local kata = {}
 
+function kata.persistence(n)
+    return n
+end
+
 function kata.remove_chars(s)
     return string.sub(s,2,-2)
 end
