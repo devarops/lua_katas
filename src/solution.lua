@@ -1,7 +1,10 @@
 local kata = {}
 
 function kata.persistence(n)
-    return n
+  local s = tostring(n)
+  if #s == 1 then
+    return 0
+  end
 end
 
 function kata.remove_chars(s)
