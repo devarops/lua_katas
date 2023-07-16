@@ -21,6 +21,7 @@ describe("persistence", function()
   end)
   it("Basic Test Case", function()
     assert.are.same(0, solution.persistence(4))
+    assert.are.same(1, solution.persistence(12))
   end)
 end)
 
