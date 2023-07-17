@@ -4,6 +4,12 @@ function kata.persistence(n)
   local s = tostring(n)
   if #s == 1 then
     return 0
+  else
+    local product = 1
+    for i = 1, #s do
+      product = product * tonumber(string.sub(s, i, i))
+    end
+    return 1 + kata.persistence(product)
   end
 end
 
